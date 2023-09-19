@@ -1,1 +1,1 @@
-go test -ldflags="-X google.golang.org/protobuf/reflect/protoregistry.conflictPolicy=ignore" -bench="BenchmarkPostgresSink" -benchmem -benchtime=1x -count=1 > bench.out
+go test -ldflags="-X google.golang.org/protobuf/reflect/protoregistry.conflictPolicy=ignore" -bench="BenchmarkPostgresSink" -benchmem -benchtime=3x -count=1 -timeout=20m > bench.out
