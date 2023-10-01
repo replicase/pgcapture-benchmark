@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  pg_source_14:
+    image: dcard/postgres:14-logical
+    container_name: pg_source_14
+    ports:
+      - "5432:5432"
+    command: [ "postgres", "-c", "config_file=/pgc/postgresql.conf", "-c","hba_file=/pgc/pg_hba.conf" ]
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - ./postgres:/pgc
+  pg_sink_14:
+    image: dcard/postgres:14-logical
+    container_name: pg_sink_14
+    ports:
+      - "5433:5432"
+    command: [ "postgres", "-c", "config_file=/pgc/postgresql.conf", "-c","hba_file=/pgc/pg_hba.conf" ]
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - ./postgres:/pgc
+  wait-demo-consumer-deps:
+    image: dadarek/wait-for-dependencies
+    depends_on:
+      - pg_source_14
+      - pg_sink_14
+    command: [ "pg_source_14:5432", "pg_sink_14:5432" ]
