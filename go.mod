@@ -2,6 +2,8 @@ module github.com/KennyChenFight/pgcapture-benchmark
 
 go 1.21
 
+replace github.com/replicase/pgcapture => /Users/kenny/CodingProject/GolangProject/src/github.com/KennyChenFight/pgcapture
+
 require (
 	github.com/jackc/pgx/v5 v5.4.3
 	github.com/replicase/pgcapture v0.0.55
@@ -22,6 +24,7 @@ require (
 	github.com/danieljoos/wincred v1.2.0 // indirect
 	github.com/dvsekhvalnov/jose2go v1.5.0 // indirect
 	github.com/frankban/quicktest v1.14.6 // indirect
+	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/godbus/dbus v0.0.0-20190726142602-4481cbc300e2 // indirect
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
