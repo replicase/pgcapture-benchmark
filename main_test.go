@@ -24,7 +24,7 @@ import (
 
 var (
 	showModePrefix = flag.Bool("showModePrefix", false, "show mode prefix")
-	modes          = strings.Split(*flag.String("modes", "default,pipeline,native", "postgres sink mode to benchmark"), ",")
+	modes          = flag.String("modes", "default,pipeline,native", "postgres sink mode to benchmark")
 )
 
 func BenchmarkPostgresSink(b *testing.B) {
@@ -258,6 +258,7 @@ func benchmarkPostgresSinkSingleInsert(b *testing.B, sourceConnStr string, sinkC
 
 	logrus.SetOutput(io.Discard)
 	b.ResetTimer()
+	modes := strings.Split(*modes, ",")
 	for _, size := range totalTXSize {
 		for _, be := range benches {
 			for _, mode := range modes {
