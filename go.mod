@@ -1,8 +1,6 @@
-module github.com/KennyChenFight/pgcapture-benchmark
+module github.com/replicase/pgcapture-benchmark
 
 go 1.21
-
-replace github.com/replicase/pgcapture => /Users/kenny/CodingProject/GolangProject/src/github.com/KennyChenFight/pgcapture
 
 require (
 	github.com/jackc/pgx/v5 v5.4.3
