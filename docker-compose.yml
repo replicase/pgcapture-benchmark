@@ -21,7 +21,7 @@ services:
       POSTGRES_HOST_AUTH_METHOD: trust
     volumes:
       - ./postgres:/pgc
-  wait-demo-consumer-deps:
+  wait-benchmark-deps:
     image: dadarek/wait-for-dependencies
     depends_on:
       - pg_source_14
