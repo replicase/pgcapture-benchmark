@@ -1,35 +1,55 @@
 goos: darwin
 goarch: arm64
-pkg: github.com/KennyChenFight/pgcapture-benchmark
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4832130267 ns/op	  144847 B/op	    2884 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4394684658 ns/op	  145459 B/op	    2897 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4831242492 ns/op	  144892 B/op	    2884 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4786640571 ns/op	  144864 B/op	    2882 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4836768558 ns/op	  144835 B/op	    2885 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4428090838 ns/op	  144894 B/op	    2889 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4382744225 ns/op	  144778 B/op	    2885 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4411133638 ns/op	  144876 B/op	    2887 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4252675834 ns/op	  145068 B/op	    2889 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4581753138 ns/op	  144661 B/op	    2882 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5601184742 ns/op	 2866152 B/op	   63414 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5527243217 ns/op	 2868314 B/op	   63446 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5977058287 ns/op	 2867264 B/op	   63422 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5954675775 ns/op	 2867346 B/op	   63433 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5541328388 ns/op	 2867281 B/op	   63416 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	6010942513 ns/op	 2866507 B/op	   63422 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5898614696 ns/op	 2867501 B/op	   63427 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5573935408 ns/op	 2866332 B/op	   63433 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	6006186092 ns/op	 2866608 B/op	   63410 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5987773562 ns/op	 2867427 B/op	   63432 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	19283193575 ns/op	36563661 B/op	  792633 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	18873717129 ns/op	36562764 B/op	  792622 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	19173583804 ns/op	36563997 B/op	  792638 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	19054883496 ns/op	36564527 B/op	  792637 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	18769888183 ns/op	36563236 B/op	  792629 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	19210825858 ns/op	36564255 B/op	  792633 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	18689646200 ns/op	36564143 B/op	  792640 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	18765481862 ns/op	36562212 B/op	  792626 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	19166429746 ns/op	36562792 B/op	  792628 allocs/op
-BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	18890731471 ns/op	36564973 B/op	  792658 allocs/op
+pkg: github.com/replicase/pgcapture-benchmark
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4767601521 ns/op	  144820 B/op	    2882 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4409128088 ns/op	  145151 B/op	    2893 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4865113225 ns/op	  145713 B/op	    2899 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4864239979 ns/op	  145676 B/op	    2902 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4484136792 ns/op	  144982 B/op	    2883 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4400431150 ns/op	  145132 B/op	    2891 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4387916246 ns/op	  144760 B/op	    2885 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4390500329 ns/op	  145067 B/op	    2890 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4441308979 ns/op	  145047 B/op	    2888 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_100-12         	      10	4478385504 ns/op	  145167 B/op	    2892 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	5137725225 ns/op	  993710 B/op	   22906 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	5122246025 ns/op	  995503 B/op	   22909 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	5088214025 ns/op	  995514 B/op	   22909 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	4693548587 ns/op	  995904 B/op	   22909 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	4847254892 ns/op	  995258 B/op	   22907 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	5131881583 ns/op	  995784 B/op	   22910 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	5107389329 ns/op	  993968 B/op	   22908 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	5009131392 ns/op	  995257 B/op	   22906 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	5039669196 ns/op	  995856 B/op	   22914 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_500-12         	      10	5003224017 ns/op	  995356 B/op	   22911 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5968997208 ns/op	 2866145 B/op	   63413 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5915882258 ns/op	 2867633 B/op	   63429 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5597279304 ns/op	 2866553 B/op	   63431 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5739346725 ns/op	 2866688 B/op	   63415 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5942864216 ns/op	 2865620 B/op	   63410 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5736196458 ns/op	 2867529 B/op	   63421 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5863414458 ns/op	 2866993 B/op	   63417 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5890002875 ns/op	 2867546 B/op	   63425 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5426986696 ns/op	 2867146 B/op	   63425 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_1000-12        	      10	5878824008 ns/op	 2867881 B/op	   63423 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10047364621 ns/op	17842061 B/op	  387492 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10284186392 ns/op	17841261 B/op	  387470 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10881294321 ns/op	17842280 B/op	  387499 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10383377258 ns/op	17843460 B/op	  387514 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10389574496 ns/op	17842467 B/op	  387504 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10625295637 ns/op	17842723 B/op	  387500 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10608842950 ns/op	17844220 B/op	  387520 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10619877513 ns/op	17841514 B/op	  387478 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10163683117 ns/op	17842058 B/op	  387471 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_5000-12        	      10	10715386221 ns/op	17842694 B/op	  387501 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	17373750879 ns/op	36561196 B/op	  792619 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	17359862392 ns/op	36561349 B/op	  792617 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	16824782517 ns/op	36563012 B/op	  792623 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	16821071700 ns/op	36561392 B/op	  792613 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	16295072784 ns/op	36563767 B/op	  792639 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	17212846013 ns/op	36562114 B/op	  792620 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	17790515854 ns/op	36560780 B/op	  792603 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	17725796333 ns/op	36559421 B/op	  792596 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	18359045838 ns/op	36559627 B/op	  792601 allocs/op
+BenchmarkPostgresSink/single_insert/txSize_10000-12       	      10	17855937054 ns/op	36560334 B/op	  792604 allocs/op
 PASS
-ok  	github.com/KennyChenFight/pgcapture-benchmark	4563.803s
+ok  	github.com/replicase/pgcapture-benchmark	6624.403s
