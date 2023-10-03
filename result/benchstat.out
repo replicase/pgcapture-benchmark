@@ -1,23 +1,29 @@
 goos: darwin
 goarch: arm64
-pkg: github.com/KennyChenFight/pgcapture-benchmark
-                                           │ result/bench-default.out │      result/bench-pipeline.out       │       result/bench-native.out       │
-                                           │          sec/op          │    sec/op     vs base                │   sec/op     vs base                │
-PostgresSink/single_insert/txSize_100-12                   4.505 ± 7%     4.465 ± 8%        ~ (p=0.796 n=10)    5.580 ± 1%  +23.87% (p=0.000 n=10)
-PostgresSink/single_insert/txSize_1000-12                  5.927 ± 7%     5.136 ± 9%  -13.35% (p=0.000 n=10)    5.626 ± 1%        ~ (p=0.353 n=10)
-PostgresSink/single_insert/txSize_10000-12              18972.8m ± 1%   7126.2m ± 3%  -62.44% (p=0.000 n=10)   766.9m ± 5%  -95.96% (p=0.000 n=10)
-geomean                                                    7.972          5.467       -31.42%                   2.887       -63.78%
+pkg: github.com/replicase/pgcapture-benchmark
+                                           │ result/bench-default.out │      result/bench-pipeline.out       │        result/bench-native.out        │
+                                           │          sec/op          │    sec/op     vs base                │    sec/op      vs base                │
+PostgresSink/single_insert/txSize_100-12                   4.460 ± 9%     4.566 ± 6%        ~ (p=0.739 n=10)    5.593 ±   1%  +25.40% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_500-12                   5.064 ± 4%     4.598 ± 7%   -9.20% (p=0.000 n=10)    5.647 ±   1%  +11.51% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_1000-12                  5.871 ± 5%     4.690 ± 2%  -20.12% (p=0.000 n=10)    5.657 ±   1%   -3.65% (p=0.023 n=10)
+PostgresSink/single_insert/txSize_5000-12               10499.2m ± 3%   5454.7m ± 7%  -48.05% (p=0.000 n=10)   827.2m ± 296%  -92.12% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_10000-12              17366.8m ± 3%   7186.5m ± 4%  -58.62% (p=0.000 n=10)   817.1m ±   9%  -95.29% (p=0.000 n=10)
+geomean                                                    7.528          5.216       -30.72%                   2.608         -65.35%
 
                                            │ result/bench-default.out │       result/bench-pipeline.out       │       result/bench-native.out        │
                                            │           B/op           │     B/op       vs base                │     B/op      vs base                │
-PostgresSink/single_insert/txSize_100-12                 141.5Ki ± 0%    186.1Ki ± 0%  +31.51% (p=0.000 n=10)   110.2Ki ± 0%  -22.12% (p=0.000 n=10)
-PostgresSink/single_insert/txSize_1000-12               2800.1Ki ± 0%   3263.7Ki ± 0%  +16.56% (p=0.000 n=10)   941.2Ki ± 0%  -66.39% (p=0.000 n=10)
-PostgresSink/single_insert/txSize_10000-12              34.870Mi ± 0%   39.385Mi ± 0%  +12.95% (p=0.000 n=10)   9.090Mi ± 0%  -73.93% (p=0.000 n=10)
-geomean                                                  2.362Mi         2.836Mi       +20.08%                  988.3Ki       -59.14%
+PostgresSink/single_insert/txSize_100-12                 141.7Ki ± 0%    185.9Ki ± 0%  +31.23% (p=0.000 n=10)   110.8Ki ± 1%  -21.78% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_500-12                 972.1Ki ± 0%   1202.9Ki ± 0%  +23.74% (p=0.000 n=10)   480.1Ki ± 0%  -50.61% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_1000-12               2799.9Ki ± 0%   3262.0Ki ± 0%  +16.50% (p=0.000 n=10)   941.1Ki ± 0%  -66.39% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_5000-12               17.016Mi ± 0%   19.275Mi ± 0%  +13.28% (p=0.000 n=10)   4.550Mi ± 0%  -73.26% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_10000-12              34.868Mi ± 0%   39.384Mi ± 0%  +12.95% (p=0.000 n=10)   9.090Mi ± 0%  -73.93% (p=0.000 n=10)
+geomean                                                  2.922Mi         3.487Mi       +19.34%                  1.140Mi       -60.98%
 
                                            │ result/bench-default.out │      result/bench-pipeline.out      │       result/bench-native.out       │
                                            │        allocs/op         │  allocs/op   vs base                │  allocs/op   vs base                │
-PostgresSink/single_insert/txSize_100-12                  2.885k ± 0%   1.606k ± 0%  -44.33% (p=0.000 n=10)   2.341k ± 0%  -18.87% (p=0.000 n=10)
-PostgresSink/single_insert/txSize_1000-12                 63.42k ± 0%   50.67k ± 0%  -20.11% (p=0.000 n=10)   20.34k ± 0%  -67.93% (p=0.000 n=10)
-PostgresSink/single_insert/txSize_10000-12                792.6k ± 0%   665.0k ± 0%  -16.11% (p=0.000 n=10)   200.3k ± 0%  -74.73% (p=0.000 n=10)
-geomean                                                   52.54k        37.82k       -28.01%                  21.21k       -59.64%
+PostgresSink/single_insert/txSize_100-12                  2.890k ± 0%   1.605k ± 0%  -44.46% (p=0.000 n=10)   2.349k ± 0%  -18.73% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_500-12                  22.91k ± 0%   16.53k ± 0%  -27.85% (p=0.000 n=10)   10.35k ± 0%  -54.82% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_1000-12                 63.42k ± 0%   50.65k ± 0%  -20.14% (p=0.000 n=10)   20.35k ± 0%  -67.92% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_5000-12                 387.5k ± 0%   323.7k ± 0%  -16.47% (p=0.000 n=10)   100.3k ± 0%  -74.12% (p=0.000 n=10)
+PostgresSink/single_insert/txSize_10000-12                792.6k ± 0%   665.0k ± 0%  -16.10% (p=0.000 n=10)   200.3k ± 0%  -74.73% (p=0.000 n=10)
+geomean                                                   66.39k        49.23k       -25.84%                  25.09k       -62.21%
