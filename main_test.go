@@ -41,7 +41,7 @@ func BenchmarkPostgresSink(b *testing.B) {
 	}
 	for _, be := range benches {
 		b.Run(be.name, func(b *testing.B) {
-			be.bench(b, sourceConnStr, sinkConnStr, []int{100, 1000, 10000}, 100)
+			be.bench(b, sourceConnStr, sinkConnStr, []int{100, 500, 1000, 5000, 10000}, 100)
 		})
 	}
 }
@@ -250,6 +250,10 @@ func benchmarkPostgresSinkSingleInsert(b *testing.B, sourceConnStr string, sinkC
 							break
 						}
 					}
+				}
+				msg := <-changes
+				if _, ok := msg.Message.Type.(*replicasepb.Message_Commit); !ok {
+					return fmt.Errorf("unexpected message type: %T", msg.Message.Type)
 				}
 				return nil
 			},
